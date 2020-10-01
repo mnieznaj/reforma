@@ -1,0 +1,37 @@
+[
+    {
+        "imgSrc": "./Assets/Imgs/products/yellow_bag.png",
+        "price": "80 PLN",
+        "name": "Torebka \"Potok\"",
+        "presentationImgSrc": "./Assets/Imgs/products/yellow_bag_presentation.png",
+        "id": 1
+    },
+    {
+        "imgSrc": "./Assets/Imgs/products/pink-black-purple_bag.png",
+        "price": "80 PLN",
+        "name": "Torebka \"Wyrzutek\"",
+        "presentationImgSrc": "./Assets/Imgs/products/pink-black-purple_bag_presentation.png",
+        "id": 2
+    },
+    {
+        "imgSrc": "./Assets/Imgs/products/green_bag.png",
+        "price": "80 PLN",
+        "name": "Torebka \"Wycinanka\"",
+        "presentationImgSrc": "./Assets/Imgs/products/green_bag_presentation.png",
+        "id": 3
+    },
+    {
+        "imgSrc": "./Assets/Imgs/products/pink_bag.png",
+        "price": "80 PLN",
+        "name": "Torebka \"Nieużytek\"",
+        "presentationImgSrc": "./Assets/Imgs/products/pink_bag_presentation.png",
+        "id": 4
+    },
+    {
+        "imgSrc": "./Assets/Imgs/products/gray_bag.png",
+        "price": "80 PLN",
+        "name": "Torebka \"Opar\"",
+        "presentationImgSrc": "./Assets/Imgs/products/gray_bag_presentation.png",
+        "id": 5
+    }
+]

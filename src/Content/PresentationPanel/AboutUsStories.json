@@ -1,0 +1,67 @@
+[
+    {
+        "title" : "Reforma",
+        "subtitle" : "to projekt marki modowej \nwykorzystującej \nponownie odpady \ntekstylne.",
+        "description": "Reforma to marka zaangażowana, odpowiedzialna,\nporuszająca problem szkód, jakie generuje przemysł\n  odzieżowy. Dotyka tematu nadmiernej eksploatacji środowiska,  \nniepohamowanej konsumpcji, staje w opozycji do tzw. fast \n fashion.\n\nCelem Reformy jest manifestacja filozofii slow fashion, \nzachęcenie do dyskusji na temat kondycji współczesnego \nprzemysłu modowego.",
+        "textStyle":{
+
+        },
+        "offsetY": 0.4,
+        "offsetX": 0.6,
+        "img": "./Assets/Imgs/about-us/story-1.png",
+        "imgAlt": "model with a purse",
+        "imgStyle": {
+            "height": "100%",
+            "zIndex": 0,
+            "right": 0,
+            "position": "absolute"
+        }
+    },
+    {
+        "title" : "Filozofia \nmarki",
+        "subtitle" : "",
+        "description": "Nasze produkty poza wartością praktyczną i estetyczną są także nośnikiem naszej filozofii. Geometryczne wzory zostały zaprojektowane na podstawie 100 częściowej siatki. Każdy wzór przedstawia wybraną niechlubną statystykę dotyczącą przemysłu modowego.",
+        "textStyle":{
+
+        },
+        "offsetY": 0.6,
+        "offsetX": 0.5,
+        "img": "./Assets/Imgs/about-us/story-2.png",
+        "imgAlt": "five purses hanging next to each other",
+        "imgStyle": {
+            "margin": "0 20vw",
+            "height": "50%",
+            "zIndex": -1
+        }
+    },
+    {
+        "title" : "Technika",
+        "subtitle" : "",
+        "description": "Produkty marki Reforma są wykonane za pomocą połączenia techniki upcyklingu i patchworku. Do wytwarzania naszych produktów używamy wyłącznie materiałów z drugiej ręki. - w ten sposób dajemy nowe życie odpadom tekstylnym.",
+        "textStyle":{
+
+        },
+        "offsetY": 0.73,
+        "offsetX": 0.48,
+        "img": "./Assets/Imgs/about-us/story-3.png",
+        "imgAlt": "texture scrapes on white background",
+        "imgStyle": {
+            
+        }
+    },
+    {
+        "title" : "Rzemieślniczy charakter",
+        "subtitle" : "",
+        "description": "Dzięki wykorzystaniu materiałów z drugiej ręki i rzemieślniczemu wykonaniu każdy produkt jest niepowtarzalnym, wyjątkowym rękodziełem.",
+        "textStyle":{
+
+        },
+        "offsetY": 0.5,
+        "offsetX": 0.55,
+        "img": "./Assets/Imgs/about-us/story-4.png",
+        "imgAlt": "a gray purse",
+        "imgStyle": {
+            
+        }
+    }
+]

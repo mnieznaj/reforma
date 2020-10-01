@@ -1,0 +1,47 @@
+[
+    {
+        "percentage": "20",
+        "description": "*Przemysł odzieżowy \\npowoduje 20% globalnego \\nzanieczyszczenia wody",
+        "offsetX": "21%",
+        "offsetY": "21%",
+        "color": "blue",
+        "gifSrc": "./Assets/Imgs/gif/plakat-20.gif",
+        "gifOffsetX": "45.7vw"
+    },
+    {
+        "percentage": "57",
+        "description": "*57% ubrań trafi na wysypisko \\n25% zostanie spalone \\n10% zostanie poddane recyklingowi \\n8% zostanie użyte ponownie",
+        "offsetX": "25%",
+        "offsetY": "25%",
+        "color": "green",
+        "gifSrc": "./Assets/Imgs/gif/plakat-57.gif",
+        "gifOffsetX": "52.8vw"
+    },
+    {
+        "percentage": "15",
+        "description": "*15% materiału trafi do \\nśmieci po samym etapie \\nkrojenia",
+        "offsetX": "55%",
+        "offsetY": "10%",
+        "color": "red",
+        "gifSrc": "./Assets/Imgs/gif/plakat-15.gif",
+        "gifOffsetX": "12.8vw"
+    },
+    {
+        "percentage": "30",
+        "description": "*Nie  używamy około \\n30% ubrań, które \\nposiadamy",
+        "offsetX": "25%",
+        "offsetY": "30%",
+        "color": "pink",
+        "gifSrc": "./Assets/Imgs/gif/plakat-30.gif",
+        "gifOffsetX": "49vw"
+    },
+    {
+        "percentage": "10",
+        "description": "*Przemysł modowy \\nodpowiada za 10% \\nświatowego śladu \\nwęglowego",
+        "offsetX": "50.5%",
+        "offsetY": "20%",
+        "color": "grey",
+        "gifSrc": "./Assets/Imgs/gif/plakat-10.gif",
+        "gifOffsetX": "14.7vw"
+    }
+]
