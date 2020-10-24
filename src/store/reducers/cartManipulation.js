@@ -1,6 +1,4 @@
 import * as actionTypes from '../actions/actionTypes';
-// import { updateObject } from '../utility';
-// import { createStore } from 'redux';
 
 const initialState = {
     display: false,
@@ -55,6 +53,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 display: false
             }
+        // no dafault
     }
     return state;
 }

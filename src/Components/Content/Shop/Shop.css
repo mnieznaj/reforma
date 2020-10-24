@@ -1,0 +1,131 @@
+.shop {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.shop .product-section {
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+}
+.shop .product-section .product-presentation {
+  grid-area: product-presentation;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.shop .product-section .product-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  grid-area: product-img;
+  object-fit: cover;
+}
+.shop .product-section .product {
+  grid-area: product;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop .product-section .product * {
+  margin: 10px auto;
+}
+.shop .product-section .product .product-price {
+  order: 3;
+  font-weight: 600;
+}
+.shop .product-section .product .product-description {
+  order: 2;
+}
+.shop .product-section .product .product-price, .shop .product-section .product .product-description {
+  display: block;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+.shop .product-section .product .product-add-to-cart {
+  order: 4;
+  width: 180px;
+  height: 63px;
+  margin-bottom: 80px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .product-section {
+    display: grid;
+    grid-template-areas: "product-img product-presentation" "product product";
+    grid-template-rows: 18fr 25fr;
+    grid-template-columns: 15fr 20fr;
+  }
+  .product-section:first-child {
+    margin-top: 60px;
+  }
+  .product-section .product-add-to-cart {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .product-section {
+    display: grid;
+    grid-template-areas: "product-img product-presentation" "product product-presentation";
+    grid-template-rows: 52fr 29fr;
+    grid-template-columns: 76fr 116fr;
+  }
+  .product-section:first-child {
+    margin-top: 80px;
+  }
+  .product-section:nth-child(even) {
+    grid-template-areas: "product-presentation product-img" "product-presentation product";
+    grid-template-columns: 116fr 76fr;
+  }
+
+  .product-presentation {
+    object-fit: cover;
+  }
+
+  .product-img {
+    display: block;
+    object-fit: scale-down;
+    margin-top: 0;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product * {
+    margin: 1rem auto;
+  }
+  .product .product-price {
+    order: 2;
+  }
+  .product .product-description {
+    order: 3;
+  }
+  .product .product-price, .product .product-description {
+    display: block;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+  }
+  .product .product-add-to-cart {
+    order: 4;
+    width: 220px;
+    height: 80px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=Shop.css.map */

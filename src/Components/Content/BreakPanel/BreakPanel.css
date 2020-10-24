@@ -1,0 +1,16 @@
+.story-break {
+  display: block;
+  width: 100%;
+  height: 540px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 600px) {
+  .story-break {
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=BreakPanel.css.map */
