@@ -74,6 +74,7 @@ p {
   font-family: "Krona One";
   font-style: normal;
   font-weight: normal;
+  z-index: 1;
 }
 
 .side-text-left {
@@ -84,6 +85,7 @@ p {
   right: 48px;
   top: -700px;
   transform-origin: right;
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1200px) {
@@ -98,7 +100,7 @@ p {
 
 .nav-logo {
   height: 40px;
-  margin: 40px;
+  margin: 40px 100px;
   display: block;
   position: fixed;
   z-index: 1;
@@ -112,8 +114,7 @@ p {
   align-items: center;
   width: 100%;
   height: 40px;
-  padding: 40px;
-  margin-right: 100px;
+  margin: 40px 0 0;
   list-style: none;
   mix-blend-mode: difference;
   color: #ffffff;
@@ -131,6 +132,9 @@ p {
   mix-blend-mode: difference;
   font-size: 1.2rem;
   cursor: pointer;
+}
+.nav-list .nav-list-item:last-child {
+  margin-right: 100px;
 }
 .nav-list .nav-list-item .nav-basket-logo {
   height: 2.5rem;
@@ -162,7 +166,7 @@ rect {
   mix-blend-mode: difference;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nav-logo {
     margin: 15px;
   }
@@ -176,6 +180,7 @@ rect {
     mix-blend-mode: normal;
     justify-content: flex-start;
     padding: 0px;
+    margin-top: 0;
     font-size: 24px;
     line-height: 150%;
     text-align: center;
@@ -290,6 +295,83 @@ rect {
   cursor: pointer;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .story-panel {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+  }
+  .story-panel .story-panel__img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: relative;
+  }
+  .story-panel .story-panel_wrapper {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    align-self: center;
+  }
+  .story-panel .story-panel__title {
+    width: 100%;
+    margin-bottom: 45vh;
+    top: 55vh;
+    margin-top: 55vh;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: Krona One;
+    font-style: normal;
+    font-weight: normal;
+    mix-blend-mode: difference;
+  }
+  .story-panel .story-panel__title .story-panel__stats-nmbr {
+    height: 192px;
+    font-size: 192px;
+    color: #ffffff;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+  }
+  .story-panel .story-panel__title .story-panel__stats-prcnt {
+    height: 96px;
+    font-size: 96px;
+    color: #ffffff;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+  }
+  .story-panel .story-panel__title .story-panel__stats-star {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+    color: #ffffff;
+  }
+  .story-panel .story-panel__stats-desc {
+    width: 214px;
+    margin-bottom: 28vh;
+    top: 85vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    position: sticky;
+    align-self: center;
+    text-align: center;
+    color: #ffffff;
+    mix-blend-mode: difference;
+  }
+}
 @media screen and (max-width: 600px) {
   .story-panel {
     width: 100vw;
@@ -471,6 +553,7 @@ rect {
   width: 100%;
   height: auto;
   object-fit: contain;
+  display: none;
 }
 
 .about-us-panel__story {
@@ -479,7 +562,8 @@ rect {
   padding: 45px;
   margin-left: 40px;
 }
-.about-us-panel__story .about-us-panel__title {
+
+.about-us-panel__title {
   max-width: 500px;
   height: auto;
   display: block;
@@ -489,18 +573,37 @@ rect {
   font-weight: normal;
   font-size: 48px;
 }
-.about-us-panel__story .about-us-panel__description {
+
+.about-us-panel__description {
   display: block;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
 
 @media screen and (max-width: 600px) {
+  .about-us__img--mobile {
+    display: block;
+  }
+
+  .about-us-panel__story {
+    margin: 0px;
+  }
+
+  .about-us-panel__title {
+    font-size: 32px;
+    width: 100%;
+  }
+
   .about-us .story-break {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 600px) {
+  .about-us__img--desktop {
+    display: block;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   .about-us-panel__story {
     max-width: 600px;
     height: 100%;
@@ -512,6 +615,21 @@ rect {
     position: relative;
   }
 
+  .about-us__panel:nth-child(1) .about-us-panel__story {
+    min-width: 500px;
+    margin-left: 100px;
+  }
+
+  .about-us__panel:nth-child(3) .about-us-panel__story {
+    margin-left: 19vw;
+    margin-bottom: 0px;
+  }
+
+  .about-us__panel:nth-child(5) .about-us-panel__story {
+    margin-bottom: 0px;
+    margin-left: 100px;
+  }
+
   .about-us-panel__story {
     position: absolute;
     max-width: 600px;
@@ -519,12 +637,8 @@ rect {
     margin-bottom: 20px;
   }
 
-  .about-us__panel:nth-child(3) .about-us-panel__story {
-    margin-bottom: 0px;
-  }
-
   .about-us__img {
-    width: 100%;
+    width: 100vw;
     height: auto;
     object-fit: cover;
   }
@@ -594,12 +708,21 @@ rect {
     grid-template-areas: "product-img product-presentation" "product product";
     grid-template-rows: 18fr 25fr;
     grid-template-columns: 15fr 20fr;
+    column-gap: 5px;
   }
   .product-section:first-child {
     margin-top: 60px;
   }
+  .product-section:nth-child(even) {
+    grid-template-areas: "product-presentation product-img" "product product";
+    grid-template-columns: 20fr 15fr;
+  }
   .product-section .product-add-to-cart {
     margin-bottom: 40px;
+  }
+
+  .product-img {
+    background: #F1F4F5;
   }
 }
 @media screen and (min-width: 601px) {
@@ -610,7 +733,7 @@ rect {
     grid-template-columns: 76fr 116fr;
   }
   .product-section:first-child {
-    margin-top: 80px;
+    margin-top: 120px;
   }
   .product-section:nth-child(even) {
     grid-template-areas: "product-presentation product-img" "product-presentation product";

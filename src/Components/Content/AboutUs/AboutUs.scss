@@ -14,6 +14,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+    display: none;
 }
 
 .about-us-panel__story{
@@ -23,33 +24,48 @@
     margin-left: 40px;
     
 
-    .about-us-panel__title{
-        max-width: 500px;
-        height: auto;
-        display: block;
-        position: none;
-
-        font-family: Krona One;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-    }
-
-    .about-us-panel__description{
-        display: block;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-    }
+}
+.about-us-panel__title{
+    max-width: 500px;
+    height: auto;
+    display: block;
+    position: none;
+    
+    font-family: Krona One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+}
+    
+.about-us-panel__description{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
 }
 
 @media screen and (max-width: $mobile){
+    .about-us__img--mobile{
+        display: block;
+    }
+    .about-us-panel__story{
+        margin: 0px;
+    }
+    .about-us-panel__title{
+        font-size: 32px;
+        width: 100%;
+    }
     .about-us{
         .story-break{
             display: none
         }
     }
 }
-@media screen and (max-width: $desktop){
+@media screen and (min-width: $mobile){
+    .about-us__img--desktop{
+        display: block;
+    }
+}
+@media screen and (min-width: $mobile) and (max-width: $desktop){
     .about-us-panel__story{
         max-width: 600px;
         height: 100%;
@@ -60,7 +76,24 @@
 @media screen and (min-width: $desktop){
     .about-us__panel{
         position: relative;
-
+    }
+    .about-us__panel:nth-child(1){
+        .about-us-panel__story{
+            min-width: 500px;
+            margin-left: 100px;
+        }
+    }
+    .about-us__panel:nth-child(3){
+        .about-us-panel__story{
+            margin-left: 19vw;
+            margin-bottom: 0px;
+        }
+    }
+    .about-us__panel:nth-child(5){
+        .about-us-panel__story{
+            margin-bottom: 0px;
+            margin-left: 100px;
+        }
     }
 
     .about-us-panel__story{
@@ -69,17 +102,11 @@
         bottom: 0px;
         margin-bottom: 20px;
     }
-    .about-us__panel:nth-child(3){
-        .about-us-panel__story{
-            margin-bottom: 0px;
-        }
-    }
 
-    // .about-us-panel__story:first-child{
-    //     width: 400px !important;
-    // }
+    
+
     .about-us__img{
-        width: 100%;
+        width: 100vw;
         height: auto;
         object-fit: cover;
     }

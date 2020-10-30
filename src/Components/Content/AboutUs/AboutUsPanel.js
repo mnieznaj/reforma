@@ -5,7 +5,8 @@ const AboutUsPanel = (props) => {
 
     return(
         <div className="about-us__panel">
-            <img className="about-us__img" src={`${story.img}`} alt={`${story.imgAlt}`}/>
+            <img className="about-us__img about-us__img--mobile" src={story.imgMobile} alt={`${story.imgAlt}`}/>
+            <img className="about-us__img about-us__img--desktop" src={story.imgDesktop} alt={`${story.imgAlt}`}/>
             <div className="about-us-panel__story">
                 <h2 className="about-us-panel__title">{story.title}</h2>
                 <span className="about-us-panel__description">{story.description}</span>

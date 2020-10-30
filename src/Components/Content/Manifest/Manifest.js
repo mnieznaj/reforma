@@ -23,11 +23,9 @@ const Manifest = () => {
             {
                 manifestStories.map((story, index) => {
                     return (
-                        <React.Fragment>
-                            <PresentationPanel story={story}>
+                            <PresentationPanel story={story} key={`manifest-${story.percentage}`}>
                                 <BreakPanel img={breaks[index].img} imgOffX={breaks[index].imgOffX}/>
                             </PresentationPanel>
-                        </React.Fragment>
                     )
                 })
             }

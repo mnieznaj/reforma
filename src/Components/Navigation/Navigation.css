@@ -5,7 +5,7 @@
 
 .nav-logo {
   height: 40px;
-  margin: 40px;
+  margin: 40px 100px;
   display: block;
   position: fixed;
   z-index: 1;
@@ -19,8 +19,7 @@
   align-items: center;
   width: 100%;
   height: 40px;
-  padding: 40px;
-  margin-right: 100px;
+  margin: 40px 0 0;
   list-style: none;
   mix-blend-mode: difference;
   color: #ffffff;
@@ -38,6 +37,9 @@
   mix-blend-mode: difference;
   font-size: 1.2rem;
   cursor: pointer;
+}
+.nav-list .nav-list-item:last-child {
+  margin-right: 100px;
 }
 .nav-list .nav-list-item .nav-basket-logo {
   height: 2.5rem;
@@ -69,7 +71,7 @@ rect {
   mix-blend-mode: difference;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nav-logo {
     margin: 15px;
   }
@@ -83,6 +85,7 @@ rect {
     mix-blend-mode: normal;
     justify-content: flex-start;
     padding: 0px;
+    margin-top: 0;
     font-size: 24px;
     line-height: 150%;
     text-align: center;

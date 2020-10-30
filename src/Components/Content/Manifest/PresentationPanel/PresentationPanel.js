@@ -3,7 +3,6 @@ import React from 'react';
 
 const PresentationPanel = (props) => {
     return(
-        <React.Fragment>
             <div className="story-panel">
                 <img className="story-panel__img" src={props.story.gifSrc} alt="model with a purse"/>
                 <span className="story-panel_wrapper">
@@ -16,7 +15,6 @@ const PresentationPanel = (props) => {
                 </span>
             {props.children}
             </div>
-        </React.Fragment>
     )
 }
 

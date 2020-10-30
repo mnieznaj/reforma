@@ -1,4 +1,94 @@
 @import '../../../../scss/0-helpers/variables';
+@media screen and (min-width: $mobile) and (max-width: $desktop){
+    .story-panel{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        position: relative;
+        
+    
+        .story-panel__img{
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            position: relative;
+        }
+        .story-panel_wrapper{
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            align-self: center;
+        }
+    
+        .story-panel__title{
+            width: 100%;
+            margin-bottom: 45vh;
+            top: 55vh;
+            margin-top: 55vh;
+            position: sticky;
+    
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+    
+            font-family: Krona One;
+            font-style: normal;
+            font-weight: normal;
+    
+            mix-blend-mode: difference;
+            
+            .story-panel__stats-nmbr{
+                height: 192px;
+                font-size: 192px;
+                
+                color: $white;
+                -webkit-text-fill-color: black;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color:white;
+            }
+            .story-panel__stats-prcnt{
+                height: 96px;
+                font-size: 96px;
+                color: $white;
+                -webkit-text-fill-color: black;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color:white;
+            }
+            .story-panel__stats-star{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 48px;
+                line-height: 57px;
+                color: $white;
+            }
+        }
+        .story-panel__stats-desc{
+            width: 214px;
+            margin-bottom: 28vh;
+            top: 85vh;
+    
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+    
+            position: sticky;
+    
+            align-self: center;
+    
+            text-align: center;
+            color: $white;
+            mix-blend-mode: difference;
+        }
+    }
+}
+
 
 @media screen and (max-width: $mobile){
     .story-panel{

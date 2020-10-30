@@ -13,6 +13,7 @@
   font-family: "Krona One";
   font-style: normal;
   font-weight: normal;
+  z-index: 1;
 }
 
 .side-text-left {
@@ -23,6 +24,7 @@
   right: 48px;
   top: -700px;
   transform-origin: right;
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1200px) {

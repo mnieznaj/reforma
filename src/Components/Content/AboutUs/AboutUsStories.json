@@ -2,25 +2,29 @@
     {
         "title" : "Reforma",
         "description": "to projekt marki modowej\nwykorzystującej ponownie odpady\ntekstylne.\nCelem Reformy jest manifestacja filozofii slow fashion, zachęcenie do dyskusji na temat kondycji współczesnego przemysłu modowego.",
-        "img": "./Assets/Imgs/about-us/story-1.png",
+        "imgDesktop": "./Assets/Imgs/about-us/story-1.png",
+        "imgMobile": "./Assets/Imgs/about-us/story-1-mobile.png",
         "imgAlt": "model with a purse"
     },
     {
         "title" : "Filozofia \nmarki",
         "description": "Nasze produkty poza wartością praktyczną i estetyczną są także nośnikiem naszej filozofii. Geometryczne wzory zostały zaprojektowane na podstawie 100 częściowej siatki. Każdy wzór przedstawia wybraną niechlubną statystykę dotyczącą przemysłu modowego.",
-        "img": "./Assets/Imgs/about-us/story-2.png",
+        "imgDesktop": "./Assets/Imgs/about-us/story-2.png",
+        "imgMobile": "./Assets/Imgs/about-us/story-2-mobile.png",
         "imgAlt": "five purses hanging next to each other"
     },
     {
         "title" : "Technika",
         "description": "Produkty marki Reforma są wykonane za pomocą połączenia techniki upcyklingu i patchworku. Do wytwarzania naszych produktów używamy wyłącznie materiałów z drugiej ręki. - w ten sposób dajemy nowe życie odpadom tekstylnym.",
-        "img": "./Assets/Imgs/about-us/story-3.png",
+        "imgDesktop": "./Assets/Imgs/about-us/story-3.png",
+        "imgMobile": "./Assets/Imgs/about-us/story-3-mobile.png",
         "imgAlt": "texture scrapes on white background"
     },
     {
         "title" : "Rzemieślniczy charakter",
         "description": "Dzięki wykorzystaniu materiałów z drugiej ręki i rzemieślniczemu wykonaniu każdy produkt jest niepowtarzalnym, wyjątkowym rękodziełem.",
-        "img": "./Assets/Imgs/about-us/story-4.png",
+        "imgDesktop": "./Assets/Imgs/about-us/story-4.png",
+        "imgMobile": "./Assets/Imgs/about-us/story-4-mobile.png",
         "imgAlt": "a gray purse"
     }
 ]
