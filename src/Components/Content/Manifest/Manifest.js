@@ -18,19 +18,13 @@ const Manifest = () => {
         new Break('./Assets/Imgs/breaks/break-4.png', "19%"),
     ];
 
-    const output = (
-        <div>
-            {
-                manifestStories.map((story, index) => {
-                    return (
-                            <PresentationPanel story={story} key={`manifest-${story.percentage}`}>
-                                <BreakPanel img={breaks[index].img} imgOffX={breaks[index].imgOffX}/>
-                            </PresentationPanel>
-                    )
-                })
-            }
-        </div>
-    );
+    const output = manifestStories.map((story, index) => {
+        return (
+            <PresentationPanel story={story} key={`manifest-${story.percentage}`}>
+                <BreakPanel img={breaks[index].img} imgOffX={breaks[index].imgOffX}/>
+            </PresentationPanel>
+        )
+    });
 
     return(
         <div className="manifest">

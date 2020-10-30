@@ -22,9 +22,9 @@
 
 .side-text-right {
   right: 48px;
-  top: -700px;
+  top: 1800px;
   transform-origin: right;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 @media screen and (min-width: 1200px) {

@@ -229,6 +229,29 @@
     grid-area: break;
     display: block;
   }
+
+  .story-panel:last-child {
+    grid-template-rows: 100vh 0vh;
+  }
+  .story-panel:last-child .story-break {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .story-panel__stats-nmbr {
+    height: 200px !important;
+    font-size: 200px !important;
+  }
+
+  .story-panel__stats-prcnt {
+    height: 100px !important;
+    font-size: 100px !important;
+  }
+
+  .story-panel__stats-star {
+    font-size: 38px !important;
+    line-height: 130px !important;
+  }
 }
 
 /*# sourceMappingURL=PresentationPanel.css.map */

@@ -6,15 +6,10 @@ import './Cart.css';
 const Cart = (props) => {
 
     const hideCart = {
-        position: 'fixed',
-        height: '100vh',
-        width: '760px',
-        right: '-760px'
+        right: '-760px',
+        display: 'none'
     }
     const displayCart = {
-        position: 'fixed',
-        height: '100vh',
-        width: '760px',
         right: '0px'
     }
     
@@ -25,14 +20,18 @@ const Cart = (props) => {
             {
                 productsList.map(prod => {
                     return <div className="product-in-cart" id={prod.id}>
-                        <img src={prod.img} alt={prod.name}/>
-                        <span>{prod.name}</span>
-                        <span>{prod.price}</span>
+                        <img className="product-in-cart__prod-img" src={prod.imgSrc} alt={prod.name}/>
                         <span className="product-in-cart__amount">
-                            <button className="product-in-cart__amount-button" onClick={() => props.onAddToCart(prod)}>+</button>
-                            <span className="product-in-cart__amount-text">Ilość: {prod.amount}</span>
-                            <button className="product-in-cart__amount-button" onClick={() => props.onRemoveFromCart(prod)}>-</button>
+                            <button className="product-in-cart__amount-button" onClick={() => props.onAddToCart(prod)}>
+                            <img src="/Assets/Imgs/icons/plus-icon.svg" alt="plus icon" />
+                            </button>
+                            <span className="product-in-cart__amount-text">{prod.amount} szt</span>
+                            <button className="product-in-cart__amount-button" onClick={() => props.onRemoveFromCart(prod)}>
+                                <img src="/Assets/Imgs/icons/minus-icon.svg" alt="minus icon" />
+                            </button>
                         </span>
+                        <span>{prod.price}</span>
+                        <span>{prod.name}</span>
                     </div>
                 })
             }
@@ -47,13 +46,13 @@ const Cart = (props) => {
         return itemsSum
     }
 
-    let style = props.cartDisplay ? displayCart : hideCart;
-    let styleOverflow = props.cartDisplay ? {display: 'block'} : {display: 'none'};
+    const styleCart = props.cartDisplay ? displayCart : hideCart;
+    const styleOverflow = props.cartDisplay ? {display: 'block'} : {display: 'none'};
     
     return(
         <React.Fragment>
             <div className="site-overflow" style={styleOverflow} onClick={() => props.onDisplayCart(false)}></div>
-            <div className="cart" style={style}>
+            <div className="cart" style={styleCart}>
                 <span className="cart-header">
                     <span className="cart-title">koszyk</span>
                     <span className="close" onClick={() => props.onDisplayCart(false)}>X</span>
