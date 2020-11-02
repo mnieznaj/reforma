@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { add, remove, displayCartHandler } from '../../store/actions/cartActions';
 import './Cart.css';
 
@@ -60,7 +61,7 @@ const Cart = (props) => {
                 </span>
                 {products}
                 {props.productsList.length > 0 ? 
-                <button className="order-summary">Dalej</button> :
+                <Link to="/order-summary" ><button className="order-summary" onClick={() => props.onDisplayCart(false)}>Dalej</button></Link> :
                 <span>Twój koszyk jest pusty</span>}
             </div>
         </React.Fragment>

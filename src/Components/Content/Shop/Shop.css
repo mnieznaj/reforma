@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .product-section {
     display: grid;
     grid-template-areas: "product-img product-presentation" "product product";
@@ -80,7 +80,7 @@
     background: #F1F4F5;
   }
 }
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 800px) {
   .product-section {
     display: grid;
     grid-template-areas: "product-img product-presentation" "product product-presentation";

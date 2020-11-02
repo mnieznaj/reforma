@@ -10,6 +10,7 @@
 @import './scss/2-basics/base';
 @import './scss/2-basics/links';
 @import './scss/2-basics/typography';
+@import './scss/2-basics/form';
 
 // COMPONENTS
 @import './Components/SideText/SideText.scss';
@@ -20,6 +21,9 @@
 @import './Components/Content/BreakPanel/BreakPanel.scss';
 @import './Components/Content/AboutUs/AboutUs.scss';
 @import './Components/Content/Shop/Shop.scss';
+@import './Components/Content/Contact/Contact.scss';
+@import './Components/Content/OrderSummary/OrderSummary.scss';
+@import './Components/Content/OrderSummary/Pay.scss';
 
 @import './Components/Footer/Footer.scss';
 

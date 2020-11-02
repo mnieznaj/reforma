@@ -35,10 +35,6 @@ const reducer = (state = initialState, action) => {
         case actionTypes.REMOVE:
             let removeFromCart = [...state.productsList];
             removeProdFromCart(removeFromCart, action.prod);
-            // const indexOfProd = removeFromCart.findIndex(prod => prod.id === action.prod.id);
-            // if((indexOfProd > -1) && (removeFromCart[indexOfProd].amount > 0)){
-            //     removeFromCart[indexOfProd].amount -= 1;
-            // }
             return{
                 ...state,
                 productsList: removeFromCart
@@ -53,7 +49,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 display: false
             }
-        // no dafault
+        // no default
     }
     return state;
 }

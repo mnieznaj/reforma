@@ -1,0 +1,42 @@
+.pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.pay-imgs-desktop {
+  display: none;
+}
+
+.pay-imgs-mobile {
+  display: flex;
+  flex-direction: column;
+}
+.pay-imgs-mobile img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .pay {
+    margin: 0 100px;
+  }
+
+  .pay-imgs-mobile {
+    display: none;
+  }
+
+  .pay-imgs-desktop {
+    display: block;
+    max-width: 1500px;
+  }
+  .pay-imgs-desktop img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/*# sourceMappingURL=Pay.css.map */

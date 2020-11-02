@@ -1,0 +1,27 @@
+@import '../../../scss/0-helpers/variables.scss';
+@import '../../../scss/0-helpers/mixins.scss';
+
+.contact{
+    min-height: 100vh;
+    margin: 150px auto;
+    width: 790px;
+
+    @include flex-col-center;
+
+    .contact-title{
+        align-self: flex-start;
+    }
+    .contact-form{
+        @include flex-col-center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contact{
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        margin: 60px 0 45px;
+    }
+}

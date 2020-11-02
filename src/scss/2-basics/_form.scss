@@ -1,0 +1,102 @@
+@import '../0-helpers/variables';
+
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title{
+    margin-bottom: 30px;
+    height: 80px;
+    width: 100%;
+    font-size: 36px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.form-label{
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px; 
+}
+
+.form-input{
+    width: 100%;
+    height: 60px;
+    border: 1px solid $black;
+    margin-bottom: 30px;
+    padding: 10px;
+    @include poppins-24($black);
+}
+.form-checkbox{
+    appearance: none;
+    
+    box-sizing: border-box;
+    display: block;
+
+    font-size: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 50px;
+    border: 1px solid $black;
+
+    &:checked{
+        background-image: url("/Assets/Imgs/icons/checked-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.form-textarea{
+    resize: none;
+    height: 300px;
+}
+
+.form-button{
+    height: 100px;
+    width: 400px;
+    background-color: $black;
+    border: none;
+    @include poppins-24($white);
+    padding: 30px;
+    align-self: center;
+    margin: 80px 0;
+
+    a{
+        color: $white
+    }
+}
+
+@media screen and (max-width: 800px){
+    .form{
+        @include flex-col-center;
+    }
+    .form-title{
+        @include poppins-24($black);
+        align-self: center;
+        text-align: center;
+        height: 40px;
+        margin: 50px 0;
+    }
+
+    .form-label{
+        font-size: 18px;
+    }
+    .form-input{
+        font-size: 18px;
+    }
+
+    .form-button{
+        width: 190px;
+        height: 60px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        align-self: center;
+    }
+}
