@@ -7,10 +7,4 @@
   background-attachment: fixed;
 }
 
-@media screen and (max-width: 600px) {
-  .story-break {
-    height: 100vh;
-  }
-}
-
 /*# sourceMappingURL=BreakPanel.css.map */

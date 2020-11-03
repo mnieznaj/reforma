@@ -8,7 +8,6 @@
 // BASICS
 @import './scss/2-basics/reset';
 @import './scss/2-basics/base';
-@import './scss/2-basics/links';
 @import './scss/2-basics/typography';
 @import './scss/2-basics/form';
 
@@ -24,7 +23,7 @@
 @import './Components/Content/Contact/Contact.scss';
 @import './Components/Content/OrderSummary/OrderSummary.scss';
 @import './Components/Content/OrderSummary/Pay.scss';
-
+@import './Components/ThankYou/ThankYou.scss';
 @import './Components/Footer/Footer.scss';
 
 // CONTENT

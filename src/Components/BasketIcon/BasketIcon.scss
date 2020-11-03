@@ -1,0 +1,19 @@
+.basket-icon{
+    position: relative;
+
+    .basket-icon__icon{
+        position: absolute;
+        width: 100%;
+    }
+    .basket-icon__amount{
+        position: absolute;
+        width: 100%;
+        mix-blend-mode: difference;
+    }
+    svg{
+        mix-blend-mode: difference;
+    }
+    path{
+        mix-blend-mode: difference;
+    }
+}

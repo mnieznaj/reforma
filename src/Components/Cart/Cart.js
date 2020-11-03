@@ -14,13 +14,13 @@ const Cart = (props) => {
         right: '0px'
     }
     
-    const productsList = [...props.productsList];
+    const productsList = props.productsList ? [...props.productsList] : false;
 
     const products = ( productsList ? (
         <ul className="cart-prod-list">
             {
-                productsList.map(prod => {
-                    return <div className="product-in-cart" id={prod.id}>
+                productsList.map((prod, index) => {
+                    return <div key={"cart-prod-" + index} className="product-in-cart" id={prod.id}>
                         <img className="product-in-cart__prod-img" src={prod.imgSrc} alt={prod.name}/>
                         <span className="product-in-cart__amount">
                             <button className="product-in-cart__amount-button" onClick={() => props.onAddToCart(prod)}>
@@ -40,12 +40,12 @@ const Cart = (props) => {
     ) : null
     );
 
-    const cartItemsCounter = () => {
-        const itemsSum = props.productsList.reduce((prevProd, currProd) => {
-            return prevProd.amount + currProd.amount
-        }, 0)
-        return itemsSum
-    }
+    // const cartItemsCounter = () => {
+    //     const itemsSum = productsList.reduce((prevProd, currProd) => {
+    //         return prevProd.amount + currProd.amount
+    //     }, 0)
+    //     return itemsSum
+    // }
 
     const styleCart = props.cartDisplay ? displayCart : hideCart;
     const styleOverflow = props.cartDisplay ? {display: 'block'} : {display: 'none'};
@@ -60,7 +60,7 @@ const Cart = (props) => {
                     {/* X zastąpić koszykiem */}
                 </span>
                 {products}
-                {props.productsList.length > 0 ? 
+                {productsList.length ? 
                 <Link to="/order-summary" ><button className="order-summary" onClick={() => props.onDisplayCart(false)}>Dalej</button></Link> :
                 <span>Twój koszyk jest pusty</span>}
             </div>

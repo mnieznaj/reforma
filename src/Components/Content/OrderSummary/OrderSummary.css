@@ -48,7 +48,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 25px 0px;
   margin: 10px 0;
 }
 .cart-summary__product-list .cart-summary__product-list-item .product-list-item__amount .product-list-item__amount-button {
@@ -101,7 +100,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .order {
     padding: 0 100px;
     align-items: flex-start;
@@ -147,7 +146,7 @@
   }
 
   .cart-summary__form {
-    width: 790px;
+    width: 720px;
   }
 
   .cart-summary__form-fields {
@@ -155,7 +154,7 @@
     height: 100%;
     display: grid;
     grid-template-areas: "inputShort none" "inputShort zip-code" "inputLong inputLong";
-    grid-template-columns: 520px 1fr;
+    grid-template-columns: 65% 1fr;
     column-gap: 30px;
   }
   .cart-summary__form-fields .input-short {

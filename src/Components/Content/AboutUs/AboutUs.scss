@@ -43,7 +43,7 @@
     font-size: 18px;
 }
 
-@media screen and (max-width: $mobile){
+@media screen and (max-width: 800px){
     .about-us__img--mobile{
         display: block;
     }
@@ -60,12 +60,12 @@
         }
     }
 }
-@media screen and (min-width: $mobile){
+@media screen and (min-width: 800px){
     .about-us__img--desktop{
         display: block;
     }
 }
-@media screen and (min-width: $mobile) and (max-width: $desktop){
+@media screen and (min-width: 800px) and (max-width: $desktop){
     .about-us-panel__story{
         max-width: 600px;
         height: 100%;

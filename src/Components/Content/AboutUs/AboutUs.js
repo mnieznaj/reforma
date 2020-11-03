@@ -22,10 +22,9 @@ const AboutUs = () => {
     const output = stories.map((story, index) => {
         if(index < stories.length - 1){
             return (
-                <React.Fragment>
-                    <AboutUsPanel key={story.title} story={story}/>
-                    <BreakPanel key={story.imgOffX} img={breaks[index].img} imgOffX={breaks[index].imgOffX}/>
-                </React.Fragment>
+                    <AboutUsPanel key={story.title} story={story}>
+                        <BreakPanel img={breaks[index].img} imgOffX={breaks[index].imgOffX}/>
+                    </AboutUsPanel>
             )
         } else {
             return (

@@ -52,7 +52,6 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 0px 25px 0px;
             margin: 10px 0;
 
             .product-list-item__amount-button{
@@ -111,7 +110,7 @@
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 900px){
     .order{
         padding: 0 100px;
         align-items: flex-start;
@@ -163,7 +162,7 @@
     }
     
     .cart-summary__form{
-        width: 790px;
+        width: 720px;
     }
     
     .cart-summary__form-fields{
@@ -174,7 +173,7 @@
             "inputShort none"
             "inputShort zip-code"
             "inputLong inputLong";
-        grid-template-columns: 520px 1fr;
+        grid-template-columns: 65% 1fr;
         column-gap: 30px;
 
         .input-short{

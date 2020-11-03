@@ -1,9 +1,15 @@
 import React from 'react';
-import {connect} from "redux";
+import {connect} from "react-redux";
+
 
 const ThankYou = (props) => {
 
-    const msg = props.msg === "order" ? "Dziękujemy za złożenie zamówienia" : props.msg === "contact" ? "Wysłano" : null;
+    let msg = props.msg === "order" ? "Dziękujemy za złożenie zamówienia" : props.msg === "contact" ? "Wysłano" : null;
+
+    setTimeout(() => {
+        window.location.href = window.location.origin;
+    }, 2000);
+    
     return(
         <div className="message">
             <p>{msg}</p>
@@ -12,9 +18,9 @@ const ThankYou = (props) => {
 }
 
 const mapStateToProps = state => {
-    return (
-        null
-    )
+    return {
+        msg: state.thankYouMsg
+    }
 }
 
 export default connect(mapStateToProps)(ThankYou);

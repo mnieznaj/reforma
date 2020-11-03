@@ -17,3 +17,10 @@ export const remove = (prod) => {
 export const displayCartHandler = (display) => {
     return display ? {type: actionTypes.SHOW_CART} : {type: actionTypes.HIDE_CART}
 }
+
+export const thankYou = msg => {
+    return {
+        type: actionTypes.THANK_YOU_MSG,
+        msg: msg
+    }
+}

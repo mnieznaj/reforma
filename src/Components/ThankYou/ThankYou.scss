@@ -1,0 +1,24 @@
+@import '../../scss/0-helpers/mixins';
+@import '../../scss/0-helpers/variables';
+
+.message{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+
+    @include flex-col-center;
+    justify-content: center;
+
+    p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        color: $black;
+        text-align: center;
+        width: 400px;
+        height: auto;
+    }
+}

@@ -4,7 +4,7 @@ import ProductList from './allProducts.json';
 
 const Shop = () => {
     const products = ProductList;
-    const output = products.map(product => <Product product={product}/>);
+    const output = products.map(product => <Product key={product.id} product={product}/>);
 
     return(
         <div className="shop">

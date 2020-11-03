@@ -9,14 +9,14 @@
     background-attachment: fixed;
 }
 
-@media screen and (max-width: $mobile){
-    .story-break{
-        height: 100vh;
-    }
-}
+// @media screen and (max-width: $mobile){
+//     .story-break{
+//         height: 100vh;
+//     }
+// }
 
-@media screen and (min-width: 601px){
-    .story-break:last-child{
-        // display: none;
-    }
-}
+// @media screen and (min-width: 601px){
+//     .story-break:last-child{
+//         // display: none;
+//     }
+// }

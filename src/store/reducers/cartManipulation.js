@@ -2,7 +2,9 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     display: false,
-    productsList: []
+    productsList: [],
+    cartItemsTotal: 0,
+    thankYouMsg: ""
 }
 
 const addProdToCart = (arrOfProd, newProd) => {
@@ -25,11 +27,10 @@ const reducer = (state = initialState, action) => {
                 addToCart = [{ ...action.prod, amount: 1 }];
             } else {
                 addProdToCart(addToCart, action.prod);
-                // const indexOfProd = addToCart.findIndex(prod => prod.id === action.prod.id);
-                // indexOfProd > -1 ? addToCart[indexOfProd].amount += 1 : addToCart.push({ ...action.prod, amount: 1 }); 
             }
             return {
                 ...state,
+                cartItemsTotal: state.cartItemsTotal + 1,
                 productsList: addToCart
             }
         case actionTypes.REMOVE:
@@ -37,6 +38,7 @@ const reducer = (state = initialState, action) => {
             removeProdFromCart(removeFromCart, action.prod);
             return{
                 ...state,
+                cartItemsTotal: state.cartItemsTotal - 1,
                 productsList: removeFromCart
             }
         case actionTypes.SHOW_CART:
@@ -48,6 +50,11 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 display: false
+            }
+        case actionTypes.THANK_YOU_MSG:
+            return {
+                ...state,
+                thankYouMsg: action.msg
             }
         // no default
     }

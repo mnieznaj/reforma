@@ -1,0 +1,20 @@
+.basket-icon {
+  position: relative;
+}
+.basket-icon .basket-icon__icon {
+  position: absolute;
+  width: 100%;
+}
+.basket-icon .basket-icon__amount {
+  position: absolute;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+.basket-icon svg {
+  mix-blend-mode: difference;
+}
+.basket-icon path {
+  mix-blend-mode: difference;
+}
+
+/*# sourceMappingURL=BasketIcon.css.map */
