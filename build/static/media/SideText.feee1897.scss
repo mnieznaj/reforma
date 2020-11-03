@@ -1,0 +1,37 @@
+@import '../../scss//0-helpers/variables';
+
+.side-text{
+    color: #fff;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:white;
+    display: none;
+    position: fixed;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+  
+    width: 1920px;
+    height: 40px;
+  
+    font-size: 34px;
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: normal;
+    z-index: 1;
+
+  }
+  .side-text-left{
+    left: -920px;
+  }
+  .side-text-right{
+    right: 48px;
+    top: 1800px;
+    transform-origin: right;
+    transform: rotate(90deg);
+  }
+  
+  @media screen and (min-width: $desktop){
+    .side-text{
+      display: block
+    }
+  }
