@@ -10,4 +10,4 @@ https://www.behance.net/karolinzielis
 
 #Tech Used
 
-HTML, SCSS, JS, React + Router + Redux
+HTML, SCSS, JS, React + Router + Redux (Redux Persist)

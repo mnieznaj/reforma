@@ -4,11 +4,30 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+//REDUX
 import { createStore } from 'redux';
-import reducer from './store/reducers/cartManipulation';
+import rootReducer from './store/reducers/cartManipulation';
 import { Provider } from 'react-redux';
 
-const store = createStore(reducer);
+//REDUX PERSIT
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore, persistReducer } from 'redux-persist';
+import storageSession from 'redux-persist/lib/storage/session';
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+const persistConfig = {
+    key: 'root',
+    storage : storageSession,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer); 
+
+const store = createStore(persistedReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+let persistor = persistStore(store);
+
+ReactDOM.render(<Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+            <App />
+        </PersistGate>
+    </Provider>, document.getElementById('root'));
 registerServiceWorker();
