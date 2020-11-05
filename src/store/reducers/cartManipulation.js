@@ -14,8 +14,12 @@ const addProdToCart = (arrOfProd, newProd) => {
 
 const removeProdFromCart = (arrOfProd, prodToRemove) => {
     const indexOfProd = arrOfProd.findIndex(prod => prod.id === prodToRemove.id);
+
     if((indexOfProd > -1) && (arrOfProd[indexOfProd].amount > 0)){
         arrOfProd[indexOfProd].amount -= 1;
+        return -1;
+    } else {
+        return 0;
     }
 }
 
@@ -23,6 +27,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type){
         case actionTypes.ADD:
             let addToCart = [...state.productsList];
+            const increaseTotal = 1;
             if(addToCart.length < 1){
                 addToCart = [{ ...action.prod, amount: 1 }];
             } else {
@@ -30,15 +35,15 @@ const reducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                cartItemsTotal: state.cartItemsTotal + 1,
+                cartItemsTotal: state.cartItemsTotal + increaseTotal,
                 productsList: addToCart
             }
         case actionTypes.REMOVE:
             let removeFromCart = [...state.productsList];
-            removeProdFromCart(removeFromCart, action.prod);
+            let decreaseTotal = removeProdFromCart(removeFromCart, action.prod);
             return{
                 ...state,
-                cartItemsTotal: state.cartItemsTotal - 1,
+                cartItemsTotal: state.cartItemsTotal + decreaseTotal,
                 productsList: removeFromCart
             }
         case actionTypes.SHOW_CART:

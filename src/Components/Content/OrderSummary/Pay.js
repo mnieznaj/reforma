@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Pay = () => {
-
     return(
         <div className="pay">
             <h2 className="form-title">Wybierz formę płatności</h2>

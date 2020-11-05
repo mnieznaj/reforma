@@ -1,24 +1,10 @@
 import React from 'react';
 import BreakPanel from '../BreakPanel/BreakPanel';
+import { breaks } from '../BreakPanel/breaksList';
 import stories from './AboutUsStories.json';
 import AboutUsPanel from './AboutUsPanel';
 
 const AboutUs = () => {
-    
-    class Break {
-        constructor(imgSrc, imgOffsetX){
-            this.img = imgSrc;
-            this.imgOffX = imgOffsetX
-        }
-    }
-    
-    const breaks = [
-        new Break('./Assets/Imgs/breaks/break-1.png', "34%"),
-        new Break('./Assets/Imgs/breaks/break-2.png', "0%"),
-        new Break('./Assets/Imgs/breaks/break-2.png', "0%"),
-        new Break('./Assets/Imgs/breaks/break-3.png', "19%")
-    ];
-
     const output = stories.map((story, index) => {
         if(index < stories.length - 1){
             return (

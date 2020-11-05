@@ -21,15 +21,16 @@
   height: 40px;
   margin: 40px 0 0;
   list-style: none;
-  mix-blend-mode: difference;
   color: #ffffff;
   position: fixed;
+  mix-blend-mode: difference;
   z-index: 1;
 }
 .nav-list .nav-list-item {
   display: inline-block;
   z-index: 2;
   height: 40px;
+  width: auto;
   line-height: 40px;
   text-align: center;
   margin: 0 2.5rem;
@@ -40,6 +41,7 @@
 }
 .nav-list .nav-list-item:last-child {
   margin-right: 100px;
+  width: 40px;
 }
 .nav-list .nav-list-item .nav-basket-logo {
   height: 40px;
@@ -57,6 +59,7 @@
   display: none;
   position: fixed;
   right: 0;
+  cursor: pointer;
 }
 
 .basket-icon-mobile {
@@ -92,9 +95,8 @@ rect {
     flex-direction: column;
     height: 367px;
     background-color: #ffffff;
-    opacity: 90%;
-    mix-blend-mode: normal;
     justify-content: flex-start;
+    mix-blend-mode: normal;
     padding: 0px;
     margin-top: 0;
     font-size: 24px;
@@ -112,10 +114,6 @@ rect {
     display: none;
   }
 
-  .nav-list--show {
-    display: flex;
-  }
-
   .nav-hamburger {
     display: block;
     position: fixed;
@@ -123,14 +121,14 @@ rect {
     z-index: 3;
   }
 
+  .nav-list--show {
+    display: flex;
+    opacity: 0.9;
+  }
+
   .basket-icon-mobile {
     display: block;
   }
-}
-.basket-test {
-  fill: white;
-  width: 40px;
-  height: 40px;
 }
 
 /*# sourceMappingURL=Navigation.css.map */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BreakPanel = (props) => {
+const BreakPanel = props => {
     const style = {
         backgroundImage: `url(${props.img})`,
         backgroundPosition: `left ${props.imgOffX}`,

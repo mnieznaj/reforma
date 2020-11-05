@@ -1,6 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Reforma - website for a zero-waste clothing company.
 
-### Deployment
+#Demo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Live version of the app - https://reforma-test.herokuapp.com/
 
+#Design
+
+https://www.behance.net/karolinzielis
+
+#Tech Used
+
+HTML, SCSS, JS, React + Router + Redux

@@ -1,19 +1,41 @@
+@import '../../scss/0-helpers/variables';
 .basket-icon{
+        fill: white;
+        width: 40px;
+        height: 40px;
+}
+.basket-icon__icon{
     position: relative;
-
-    .basket-icon__icon{
-        position: absolute;
-        width: 100%;
-    }
-    .basket-icon__amount{
-        position: absolute;
-        width: 100%;
-        mix-blend-mode: difference;
-    }
-    svg{
-        mix-blend-mode: difference;
-    }
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: difference;
     path{
         mix-blend-mode: difference;
+    }
+}
+
+.basket-icon__amount{
+    position: absolute;
+    text-align: center;
+    width: 40px;
+    mix-blend-mode: difference;
+    color: $white;
+    font-size: 24px;
+}
+
+.basket-icon-mobile{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    mix-blend-mode: difference;
+    z-index: 5;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    .basket-icon-mobile{
+        display: block;
     }
 }

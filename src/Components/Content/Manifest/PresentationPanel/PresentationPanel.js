@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PresentationPanel = (props) => {
+const PresentationPanel = props => {
     const story = props.story;
     return(
             <div className="story-panel">

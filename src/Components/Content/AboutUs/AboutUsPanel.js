@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutUsPanel = (props) => {
+const AboutUsPanel = props => {
     const story = props.story;
 
     return(

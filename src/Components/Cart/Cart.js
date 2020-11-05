@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { add, remove, displayCartHandler } from '../../store/actions/cartActions';
+import BasketIcon from '../BasketIcon/BasketIcon';
 import './Cart.css';
 
 const Cart = (props) => {
-
     const hideCart = {
         right: '-760px',
         display: 'none'
@@ -40,13 +40,6 @@ const Cart = (props) => {
     ) : null
     );
 
-    // const cartItemsCounter = () => {
-    //     const itemsSum = productsList.reduce((prevProd, currProd) => {
-    //         return prevProd.amount + currProd.amount
-    //     }, 0)
-    //     return itemsSum
-    // }
-
     const styleCart = props.cartDisplay ? displayCart : hideCart;
     const styleOverflow = props.cartDisplay ? {display: 'block'} : {display: 'none'};
     
@@ -56,8 +49,7 @@ const Cart = (props) => {
             <div className="cart" style={styleCart}>
                 <span className="cart-header">
                     <span className="cart-title">koszyk</span>
-                    <span className="close" onClick={() => props.onDisplayCart(false)}>X</span>
-                    {/* X zastąpić koszykiem */}
+                    <span className="close" onClick={() => props.onDisplayCart(false)}><BasketIcon top="39px" right="73px"/></span>
                 </span>
                 {products}
                 {productsList.length ? 

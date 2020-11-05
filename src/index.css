@@ -220,15 +220,16 @@ p {
   height: 40px;
   margin: 40px 0 0;
   list-style: none;
-  mix-blend-mode: difference;
   color: #ffffff;
   position: fixed;
+  mix-blend-mode: difference;
   z-index: 1;
 }
 .nav-list .nav-list-item {
   display: inline-block;
   z-index: 2;
   height: 40px;
+  width: auto;
   line-height: 40px;
   text-align: center;
   margin: 0 2.5rem;
@@ -239,6 +240,7 @@ p {
 }
 .nav-list .nav-list-item:last-child {
   margin-right: 100px;
+  width: 40px;
 }
 .nav-list .nav-list-item .nav-basket-logo {
   height: 40px;
@@ -256,6 +258,7 @@ p {
   display: none;
   position: fixed;
   right: 0;
+  cursor: pointer;
 }
 
 .basket-icon-mobile {
@@ -291,9 +294,8 @@ rect {
     flex-direction: column;
     height: 367px;
     background-color: #ffffff;
-    opacity: 90%;
-    mix-blend-mode: normal;
     justify-content: flex-start;
+    mix-blend-mode: normal;
     padding: 0px;
     margin-top: 0;
     font-size: 24px;
@@ -311,10 +313,6 @@ rect {
     display: none;
   }
 
-  .nav-list--show {
-    display: flex;
-  }
-
   .nav-hamburger {
     display: block;
     position: fixed;
@@ -322,16 +320,56 @@ rect {
     z-index: 3;
   }
 
+  .nav-list--show {
+    display: flex;
+    opacity: 0.9;
+  }
+
   .basket-icon-mobile {
     display: block;
   }
 }
-.basket-test {
+.basket-icon {
   fill: white;
   width: 40px;
   height: 40px;
 }
 
+.basket-icon__icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  mix-blend-mode: difference;
+}
+.basket-icon__icon path {
+  mix-blend-mode: difference;
+}
+
+.basket-icon__amount {
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  mix-blend-mode: difference;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.basket-icon-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+  mix-blend-mode: difference;
+  z-index: 5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .basket-icon-mobile {
+    display: block;
+  }
+}
 .site-overflow {
   z-index: 1;
   cursor: pointer;
@@ -949,8 +987,13 @@ rect {
   }
 }
 @media screen and (max-width: 600px) {
-  .product-section {
-    height: 90vh;
+  .shop .product-section {
+    min-height: 600px;
+    grid-template-rows: 50% 50% !important;
+    grid-template-columns: 50% 50% !important;
+  }
+  .shop .product * {
+    margin: 30px 0;
   }
 }
 .contact {

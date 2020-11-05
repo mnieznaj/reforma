@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { add } from '../../../../store/actions/cartActions';
 
-const Product = (props) => {
+const Product = props => {
     const prod = props.product;
 
     return(

@@ -2,9 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 
 
-const ThankYou = (props) => {
-
-    let msg = props.msg === "order" ? "Dziękujemy za złożenie zamówienia" : props.msg === "contact" ? "Wysłano" : null;
+const ThankYou = props => {
+    const msg = props.msg === "order" ? "Dziękujemy za złożenie zamówienia" : props.msg === "contact" ? "Wysłano" : null;
 
     setTimeout(() => {
         window.location.href = window.location.origin;
