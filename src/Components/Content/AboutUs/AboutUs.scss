@@ -1,4 +1,4 @@
-@import '../../../scss/0-helpers/variables';
+@import '../../../scss/helpers/variables';
 // ABOUT US
 
 .about-us__panel{
@@ -22,8 +22,6 @@
     flex-direction: column;
     padding: 45px;
     margin-left: 40px;
-    
-
 }
 .about-us-panel__title{
     max-width: 500px;
@@ -102,8 +100,6 @@
         bottom: 0px;
         margin-bottom: 20px;
     }
-
-    
 
     .about-us__img{
         width: 100vw;

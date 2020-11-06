@@ -1,9 +1,8 @@
-@import '../../../scss/0-helpers/variables';
-@import '../../../scss/0-helpers/mixins';
+@import '../../../scss/helpers/variables';
+@import '../../../scss/helpers/mixins';
 
 .order{
     @include flex-col-center;
-    
     margin: 90px auto;
     height: 100%;
     width: 100%;
@@ -110,17 +109,6 @@
         flex-direction: row;
         align-items: center;
     }
-}
-
-.error-msg{
-    font-size: 18px;
-    color: $error;
-    height: auto;
-    width: 300px;
-    display: block;
-    text-align: center;
-    position: relative;
-    // bottom: 60px;
 }
 
 @media screen and (min-width: 900px){

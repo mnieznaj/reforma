@@ -1,0 +1,26 @@
+@import '../helpers/variables';
+
+// BASE
+body{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    z-index:0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+.root{
+    background-color: $white;
+}
+
+.error-msg{
+    font-size: 18px;
+    color: $error;
+    height: auto;
+    width: 300px;
+    display: block;
+    text-align: center;
+    position: relative;
+}

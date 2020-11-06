@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { add, remove, thankYou } from '../../../store/actions/cartActions';
 import { Redirect } from 'react-router-dom';
-
 import { useFormik } from 'formik';
+
 
 const validate = values => {
     const errors = {};
@@ -83,7 +83,6 @@ const OrderSummary = props => {
             console.log("Value to be sent in http request: " + JSON.stringify(formData, null, 2));
             props.thankYouMsg("order");
             window.location = window.origin + "/pay";
-            // submit = <Redirect to="/pay" />
         }
     });
 
@@ -137,16 +136,16 @@ const OrderSummary = props => {
                         <section className="input-short">
                             {formik.touched.email && formik.errors.email ? <div className="error-msg">{formik.errors.email}</div> : null}
                             <label className="form-label" htmlFor="email" >E-mail</label>
-                            <input className="form-input" type="email" name="email" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email}/>
-                            {formik.errors.firstName ? <div className="error-msg">{formik.errors.firstName}</div> : null}
+                            <input className="form-input" type="email" {...formik.getFieldProps('email')}/>
+                            {formik.touched.firstName && formik.errors.firstName ? <div className="error-msg">{formik.errors.firstName}</div> : null}
                             <label className="form-label" htmlFor="firstName" >Imię</label>
-                            <input className="form-input" type="text" name="firstName" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.firstName}/>
+                            <input className="form-input" type="text" {...formik.getFieldProps('firstName')}/>
                             {formik.touched.lastName && formik.errors.lastName ? <div className="error-msg">{formik.errors.lastName}</div> : null}
                             <label className="form-label" htmlFor="lastName" >Nazwisko</label>
-                            <input className="form-input" type="text" name="lastName" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.lastName}/>
+                            <input className="form-input" type="text" {...formik.getFieldProps('lastName')}/>
                             {formik.touched.city && formik.errors.city ? <div className="error-msg">{formik.errors.city}</div> : null}
                             <label className="form-label" htmlFor="city" >Miasto</label>
-                            <input className="form-input" type="text" name="city" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.city}/>
+                            <input className="form-input" type="text" {...formik.getFieldProps('city')}/>
                         </section>
                         <span className="cart-summary__zip-code">
                             <div className="error-msg" style={{gridArea: "error"}}>
@@ -155,15 +154,15 @@ const OrderSummary = props => {
                             <label className="form-label" htmlFor="zip-code" >Kod</label>
                             <input className="form-input" type="text" name="zipCode1" id="zipCode1" onChange={(e) => {zipSkip(e); formik.handleChange(e)}} onBlur={formik.handleBlur} autoComplete="off" maxLength="2" value={formik.values.zipCode1}/>
                             <div className="zip-dash"></div>
-                            <input className="form-input" type="text" name="zipCode2" id="zipCode2" onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete="off" maxLength="3" value={formik.values.zipCode2}/>
+                            <input className="form-input" type="text" id="zipCode2" autoComplete="off" maxLength="3" {...formik.getFieldProps('zipCode2')}/>
                         </span>
                         <section className="input-long">
                             {formik.touched.address && formik.errors.address ? <div className="error-msg">{formik.errors.address}</div> : null}
                             <label className="form-label" htmlFor="address" >Adres</label>
-                            <input className="form-input" type="text" name="address" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.address}/>
+                            <input className="form-input" type="text" {...formik.getFieldProps('address')}/>
                             {formik.touched.phone && formik.errors.phone ? <div className="error-msg">{formik.errors.phone}</div> : null}
                             <label className="form-label" htmlFor="phone" >Tel.</label>
-                            <input className="form-input" type="text" name="phone" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.phone}/>
+                            <input className="form-input" type="text" {...formik.getFieldProps('phone')}/>
                         </section>
                     </div>
                 </form>

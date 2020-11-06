@@ -1,4 +1,4 @@
-@import '../../../scss/0-helpers/variables';
+@import '../../../scss/helpers/variables';
 
 // SHOP
 .shop{
@@ -167,6 +167,15 @@
             *{
                 margin: 30px 0;
             }
+        }
+    }
+}
+@media screen and (max-width: 420px){
+    .shop{
+        .product-section{
+            grid-template-areas: 
+            "img img"
+            "product product" !important;
         }
     }
 }

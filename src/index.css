@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,38 +18,22 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   z-index: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
 }
 
 .root {
   background-color: #ffffff;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  font-size: 10px;
-}
-
-h2 {
-  width: 470px;
-  height: 275px;
-  font-family: "Krona One", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 187.8%;
-  letter-spacing: 0.025em;
-  color: #000000;
-}
-
-p {
-  position: absolute;
-  width: 305px;
-  height: 263px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 3rem;
-  color: #000000;
+.error-msg {
+  font-size: 18px;
+  color: #FF3F56;
+  height: auto;
+  width: 300px;
+  display: block;
+  text-align: center;
+  position: relative;
 }
 
 .form {
@@ -92,6 +75,8 @@ p {
 .form-checkbox {
   appearance: none;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   display: block;
   font-size: 0;
   width: 62px;
@@ -172,10 +157,10 @@ p {
   }
 }
 .side-text {
-  color: #fff;
-  -webkit-text-fill-color: black;
+  color: #ffffff;
+  -webkit-text-fill-color: #000000;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #ffffff;
   display: none;
   position: fixed;
   text-transform: uppercase;
@@ -439,7 +424,7 @@ rect {
 }
 
 .cart-prod-list {
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .product-in-cart > span {
@@ -1004,6 +989,11 @@ rect {
     margin: 30px 0;
   }
 }
+@media screen and (max-width: 420px) {
+  .shop .product-section {
+    grid-template-areas: "img img" "product product" !important;
+  }
+}
 .contact {
   min-height: 100vh;
   margin: 150px auto;
@@ -1130,16 +1120,6 @@ rect {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.error-msg {
-  font-size: 18px;
-  color: #FF3F56;
-  height: auto;
-  width: 300px;
-  display: block;
-  text-align: center;
-  position: relative;
 }
 
 @media screen and (min-width: 900px) {

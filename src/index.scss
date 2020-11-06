@@ -1,15 +1,14 @@
-// HELPERS
-@import './scss/0-helpers/variables';
-@import './scss/0-helpers/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-// TOOLS
-@import './scss/1-tools/animations';
+// HELPERS
+@import './scss/helpers/variables';
+@import './scss/helpers/mixins';
 
 // BASICS
-@import './scss/2-basics/reset';
-@import './scss/2-basics/base';
-@import './scss/2-basics/typography';
-@import './scss/2-basics/form';
+@import './scss/basics/reset';
+@import './scss/basics/base';
+@import './scss/basics/form';
 
 // COMPONENTS
 @import './Components/SideText/SideText.scss';

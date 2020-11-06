@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "compile-sass": "sass src/index.scss src/index.css",
     "watch-sass": "sass --watch src/:src/"
   },
   "devDependencies": {

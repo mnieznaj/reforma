@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { add, remove, displayCartHandler } from '../../store/actions/cartActions';
 import BasketIcon from '../BasketIcon/BasketIcon';
-import './Cart.css';
 
 const Cart = (props) => {
     const hideCart = {
