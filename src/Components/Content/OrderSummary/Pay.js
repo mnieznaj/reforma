@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { resetCart } from "../../../store/actions/cartActions";
+import { connect } from "react-redux";
 
-const Pay = () => {
+const Pay = (props) => {
     return(
         <div className="pay">
             <h2 className="form-title">Wybierz formę płatności</h2>
@@ -13,10 +15,18 @@ const Pay = () => {
                 <img src="/Assets/Imgs/pay/pay-1.png" alt="payment methods"/>
             </div>
             <button className="form-button" type="submit">
-                <Link to="/thank-you">Zamów</Link>
+                <Link to="/thank-you" onClick={props.resetCart}>
+                    Zamów
+                </Link>
             </button>
         </div>
     )
 }
 
-export default Pay;
+const mapDispatchToProps = dispatch => {
+    return {
+        resetCart: () => dispatch(resetCart())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Pay);

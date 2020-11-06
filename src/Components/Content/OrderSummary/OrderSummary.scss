@@ -67,10 +67,12 @@
     height: 1005;
     display: grid;
     grid-template-areas: 
+        "error error error"
         "label label label"
         "zip1 dash zip2";
     grid-template-columns: 116px 54px 160px;
-    grid-template-rows: 27px 60px;
+    grid-template-rows: 27px 27px 60px;
+
     row-gap: 10px;
     margin-bottom: 30px;
     grid-area: zip-code;
@@ -108,6 +110,17 @@
         flex-direction: row;
         align-items: center;
     }
+}
+
+.error-msg{
+    font-size: 18px;
+    color: $error;
+    height: auto;
+    width: 300px;
+    display: block;
+    text-align: center;
+    position: relative;
+    // bottom: 60px;
 }
 
 @media screen and (min-width: 900px){
@@ -175,6 +188,7 @@
             "inputLong inputLong";
         grid-template-columns: 65% 1fr;
         column-gap: 30px;
+        align-items: center;
 
         .input-short{
             @include flex-col-center;

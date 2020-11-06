@@ -24,3 +24,11 @@ export const thankYou = msg => {
         msg: msg
     }
 }
+
+export const resetCart = () => {
+    return { type: actionTypes.RESET_CART }
+}
+
+export const resetMsg = () => {
+    return { type: actionTypes.RESET_MSG }
+}

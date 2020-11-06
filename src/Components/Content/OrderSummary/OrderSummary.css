@@ -59,9 +59,9 @@
   width: 100%;
   height: 1005;
   display: grid;
-  grid-template-areas: "label label label" "zip1 dash zip2";
+  grid-template-areas: "error error error" "label label label" "zip1 dash zip2";
   grid-template-columns: 116px 54px 160px;
-  grid-template-rows: 27px 60px;
+  grid-template-rows: 27px 27px 60px;
   row-gap: 10px;
   margin-bottom: 30px;
   grid-area: zip-code;
@@ -98,6 +98,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.error-msg {
+  font-size: 18px;
+  color: #FF3F56;
+  height: auto;
+  width: 300px;
+  display: block;
+  text-align: center;
+  position: relative;
 }
 
 @media screen and (min-width: 900px) {
@@ -156,6 +166,7 @@
     grid-template-areas: "inputShort none" "inputShort zip-code" "inputLong inputLong";
     grid-template-columns: 65% 1fr;
     column-gap: 30px;
+    align-items: center;
   }
   .cart-summary__form-fields .input-short {
     display: flex;

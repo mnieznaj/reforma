@@ -7,16 +7,16 @@ const initialState = {
     thankYouMsg: ""
 }
 
-const addProdToCart = (arrOfProd, newProd) => {
-    const indexOfProd = arrOfProd.findIndex(prod => prod.id === newProd.id);
-    indexOfProd > -1 ? arrOfProd[indexOfProd].amount += 1 : arrOfProd.push({ ...newProd, amount: 1 });
+const addProdToCart = (currentCart, newProd) => {
+    const indexOfProd = currentCart.findIndex(prod => prod.id === newProd.id);
+    indexOfProd > -1 ? currentCart[indexOfProd].amount += 1 : currentCart.push({ ...newProd, amount: 1 });
 }
 
-const removeProdFromCart = (arrOfProd, prodToRemove) => {
-    const indexOfProd = arrOfProd.findIndex(prod => prod.id === prodToRemove.id);
+const removeProdFromCart = (currentCart, prodToRemove) => {
+    const indexOfProd = currentCart.findIndex(prod => prod.id === prodToRemove.id);
 
-    if((indexOfProd > -1) && (arrOfProd[indexOfProd].amount > 0)){
-        arrOfProd[indexOfProd].amount -= 1;
+    if((indexOfProd > -1) && (currentCart[indexOfProd].amount > 0)){
+        currentCart[indexOfProd].amount -= 1;
         return -1;
     } else {
         return 0;
@@ -60,6 +60,17 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 thankYouMsg: action.msg
+            }
+        case actionTypes.RESET_CART:
+            return {
+                ...state,
+                cartItemsTotal: 0,
+                productsList: []
+            }
+        case actionTypes.RESET_MSG:
+            return {
+                ...state,
+                thankYouMsg: ""
             }
         // no default
     }
