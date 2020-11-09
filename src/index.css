@@ -1086,7 +1086,7 @@ rect {
   border-top: 2px solid #000000;
   margin-top: 45px;
   font-family: "Poppins";
-  font-size: 36px;
+  font-size: 24px;
   color: #000000;
 }
 
@@ -1173,6 +1173,12 @@ rect {
   .order .cart-summary .cart-summary__product-list .cart-summary__product-list-item .product-list-item__amount {
     width: 240px;
     font-size: 24px;
+  }
+
+  .cart-summary__total-cost {
+    font-family: "Poppins";
+    font-size: 36px;
+    color: #000000;
   }
 
   .form-title {

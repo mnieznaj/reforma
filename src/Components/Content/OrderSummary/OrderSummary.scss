@@ -66,7 +66,7 @@
     width: 100%;
     border-top: 2px solid $black;
     margin-top: 45px;
-    @include poppins-36($black);
+    @include poppins-24($black);
 }
 
 .cart-summary__zip-code{
@@ -164,6 +164,9 @@
                 }
             }
         }
+    }
+    .cart-summary__total-cost{
+        @include poppins-36($black);
     }
     .form-title{
         text-align: center;
