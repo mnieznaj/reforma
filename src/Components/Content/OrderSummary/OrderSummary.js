@@ -128,6 +128,12 @@ const OrderSummary = props => {
                             {renderList()}
                         </ul>
                     </div>
+                    <span className="cart-summary__total-cost">
+                        <span>
+                            Suma:
+                        </span>
+                        <span>{props.productsList.length * 80} PLN</span>
+                    </span>
                 </div>
     
                 <h2 className="form-title">Dane do przesyłki</h2>
