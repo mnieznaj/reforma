@@ -1,18 +1,18 @@
 @import '../../../../scss/helpers/variables';
+@import '../../../../scss/helpers/mixins';
 
 @media screen and (min-width: $mobile) and (max-width: $desktop){
     .story-panel{
         width: 100vw;
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, null, null);
+
         background-color: $white;
         position: relative;
     
         .story-panel__img{
-            object-fit: cover;
-            width: 100vw;
-            height: 1080px;
+            @include img-props(cover, 100vw, 1080px);
+
             z-index: 0;
             position: relative;
         }
@@ -25,15 +25,11 @@
     
         .story-panel__title{
             width: 100%;
-            margin-bottom: 300px;
+            margin: 400px 0 300px 0;
             top: 400px;
-            margin-top: 400px;
             position: sticky;
     
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
+            @include flex(row, center, flex-end);
     
             font-family: Krona One;
             font-style: normal;
@@ -44,28 +40,20 @@
             .story-panel__stats-nmbr{
                 height: 192px;
                 font-size: 192px;
-                
-                color: $white;
-                -webkit-text-fill-color: black;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color:white;
+
+                @include blend-stroke;
             }
             .story-panel__stats-prcnt{
                 height: 96px;
                 font-size: 96px;
-                color: $white;
-                -webkit-text-fill-color: black;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color:white;
+
+                @include blend-stroke;
             }
             .story-panel__stats-star{
-                font-family: Poppins;
+                @include poppins(48px, $white, 57px, null);
+            }
                 font-style: normal;
                 font-weight: normal;
-                font-size: 48px;
-                line-height: 57px;
-                color: $white;
-            }
         }
         .story-panel__stats-desc{
             display: block;
@@ -74,17 +62,12 @@
             margin-bottom: 180px;
             top: 1200px;
     
-            font-family: Poppins;
-            font-style: normal;
+            @include poppins(18px, $white, 27px, center);
+
             font-weight: normal;
-            font-size: 18px;
-            line-height: 27px;
-    
             position: sticky;
             align-self: center;
     
-            text-align: center;
-            color: $white;
             mix-blend-mode: difference;
         }
     }
@@ -95,15 +78,14 @@
     .story-panel{
         width: 100vw;
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, null, null);
+
         background-color: $white;
         position: relative;
 
         .story-panel__img{
-            object-fit: cover;
-            width: 100vw;
-            height: 700px;
+            @include img-props(cover, 100vw, 700px);
+           
             z-index: 0;
 
             position: relative;
@@ -117,15 +99,12 @@
 
         .story-panel__title{
             width: 100%;
-            margin-bottom: 350px;
+            margin: 200px 0 350px 0;
+            
             top: 200px;
-            margin-top: 200px;
             position: sticky;
     
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
+            @include flex(row, flex-end, center);
 
             font-family: Krona One;
             font-style: normal;
@@ -137,26 +116,19 @@
                 height: 96px;
                 font-size: 96px;
                 
-                color: $white;
-                -webkit-text-fill-color: black;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color:white;
+                @include blend-stroke;
             }
             .story-panel__stats-prcnt{
                 height: 48px;
                 font-size: 48px;
-                color: $white;
-                -webkit-text-fill-color: black;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color:white;
+                
+                @include blend-stroke;
             }
             .story-panel__stats-star{
-                font-family: Poppins;
+                @include poppins(24px, $white, 57px, null);
+
                 font-style: normal;
                 font-weight: normal;
-                font-size: 24px;
-                line-height: 57px;
-                color: $white;
             }
         }
         .story-panel__stats-desc{
@@ -166,18 +138,15 @@
             margin: 0 auto 200px;
             top: 950px;
 
-            font-family: Poppins;
+            @include poppins(18px, $white, 27px, center);
+            
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
-            line-height: 27px;
 
             position: sticky;
 
             align-self: center;
 
-            text-align: center;
-            color: $white;
             mix-blend-mode: difference;
         }
     }
@@ -207,15 +176,10 @@
         .story-panel_wrapper{
             grid-area: info;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
+            @include flex(column, center, flex-end);
 
             .story-panel__title{
-                display: flex;
-                flex-direction: row;
-                align-items: flex-end;
+                @include flex(row, null, flex-end);
     
                 font-family: Krona One;
                 font-style: normal;
@@ -227,49 +191,38 @@
                     height: 288px;
                     font-size: 288px;
                     
-                    color: $white;
-                    -webkit-text-fill-color: black;
-                    -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color:white;
+                    @include blend-stroke;
                 }
                 .story-panel__stats-prcnt{
                     height: 144px;
                     font-size: 144px;
-                    color: $white;
-                    -webkit-text-fill-color: black;
-                    -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color:white;
+
+                    @include blend-stroke;
                 }
                 .story-panel__stats-star{
-                    font-family: Poppins;
+                    @include poppins(44px, $white, 190px, null);
+
                     font-style: normal;
                     font-weight: normal;
-                    font-size: 44px;
-                    line-height: 190px;
-                    color: $white;
                 }
             }
             .story-panel__stats-desc{
                 width: 214px;
                 margin-top: 60px;
     
-                font-family: Poppins;
+                @include poppins(18px, $white, 27px, null);
+
                 font-style: normal;
                 font-weight: 500;
-                font-size: 18px;
-                line-height: 27px;
     
                 align-self: right;
     
-                color: $white;
                 mix-blend-mode: difference;
             }
         }
         .story-panel__img{
             grid-area: img;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
+            @include img-props(cover, 100%, 100%);
         }
         .story-break{
             grid-area: break;
@@ -298,5 +251,14 @@
     .story-panel__stats-star{
         font-size: 38px !important;
         line-height: 130px !important;
+    }
+}
+
+@media screen and (max-width: $desktop) and (orientation: landscape){
+    .story-panel{
+        .story-panel__title{
+            margin-top: 200px;
+            top: 200px;
+        }
     }
 }

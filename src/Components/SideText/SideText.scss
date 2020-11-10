@@ -1,10 +1,9 @@
 @import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 .side-text{
-    color: $white;
-    -webkit-text-fill-color: $black;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color:$white;
+    @include blend-stroke;
+
     display: none;
     position: fixed;
     text-transform: uppercase;

@@ -174,7 +174,7 @@ const OrderSummary = props => {
                 </form>
     
                 <h2 className="form-title">Wybierz rodzaj przesyłki</h2>
-                <form className="form cart-summary__form">
+                <form className="form cart-summary__form cart-summary__form--second">
                     <div className="cart-summary__delivery">
                         {formik.touched.delivery && formik.errors.delivery ? <div className="error-msg">{formik.errors.delivery}</div> : null}
                         <span className="cart-summary__delivery-checkbox">
@@ -196,7 +196,7 @@ const OrderSummary = props => {
                     </div>
     
                 </form>
-                <button className="form-button" type="submit" onClick={formik.handleSubmit}>
+                <button className="form-button order-summary__button" type="submit" onClick={formik.handleSubmit}>
                     Płatność
                 </button>
             </div>

@@ -1,4 +1,5 @@
 @import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 // CART
 .site-overflow{
@@ -12,9 +13,8 @@
     left: 0;
 }
 .cart{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(column, space-between, null);
+    
     position: fixed;
     height: 100vh;
     width: 760px;
@@ -28,28 +28,26 @@
     overflow-y: auto;
 
     .cart-header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex (row, space-between, null);
+        
         margin-bottom: 50px;
     }
 
     .product-in-cart{
-        display: flex;
-        flex-direction: column;
+        @include flex(column, null, null);
+
         width: 281px;
         margin-bottom: 2rem;
 
     }
     .product-in-cart__prod-img{
-        width: 281px;
-        height: 281px;
+        @include img-props(contain, 281px, 281px);
+
+        object-position: top;
         display: block;
         background-color: $white;
         box-sizing: initial;
         margin-bottom: 1rem;
-        object-fit: contain;
-        object-position: top;
     }
 }
 
@@ -63,7 +61,7 @@
 }
 
 .cart-prod-list{
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .product-in-cart > span {
@@ -71,16 +69,13 @@
     margin-bottom: 1rem
 }
 .product-in-cart__amount{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(row, space-around, center);
 }
 
 .product-in-cart__amount-button{
     display: inline-block;
-    background-color: #000;
-    color: #FCFBF6;
+    background-color: $black;
+    color: $white-ish;
     font-size: 1.5rem;
     height: 35px;
     width: 35px;
@@ -97,10 +92,9 @@
     display: block;
     width: 220px;
     height: 80px;
-    background-color: #FCFBF6;
-    color: #000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    background-color: $white-ish;
+    @include poppins(24px, $black, null, null);
+
     margin: 20px auto 0;
     cursor: pointer;
 }

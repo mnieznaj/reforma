@@ -2,26 +2,25 @@
 @import '../../../scss/helpers/mixins';
 
 .order{
-    @include flex-col-center;
-    margin: 90px auto;
+    @include flex(column, null center);
+    @include separation(90px auto, 15px);
+
     height: 100%;
     width: 100%;
-    padding: 15px;
-
-    display: flex;
-    flex-direction: column;
 }
 
 .cart-summary__product-list{
     width: calc(100vw - 30px);
     height: 100%;
-    display: flex;
-    flex-direction: column;
+
+    @include flex(column);
+
     padding: 14px;
 
     list-style: none;
     background-color: $black;
-    @include poppins-18($white);
+    @include poppins(18px, $white, null, null);
+
     
     .cart-summary__product-list-item{
         width: 100%;
@@ -40,17 +39,16 @@
             object-fit: cover;
         }
         .product-list-item__details{
-            display: flex;
-            flex-direction: column;
+            @include flex(column);
+
             padding: 18px;
         }
         .product-list-item__amount{
             width: 100%;
             grid-area: amount;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+
+            @include flex(row, space-around, center);
+
             margin: 10px 0;
 
             .product-list-item__amount-button{
@@ -61,12 +59,12 @@
     }
 }
 .cart-summary__total-cost{
-    @include flex-row-center;
-    justify-content: space-between;
+    @include flex(row, space-between, center);
+    height: 50px;
     width: 100%;
     border-top: 2px solid $black;
     margin-top: 45px;
-    @include poppins-24($black);
+    @include poppins(24px,$black, null, null);
 }
 
 .cart-summary__zip-code{
@@ -106,20 +104,27 @@
 
 .cart-summary__delivery{
     width: 100%;
-    @include flex-col-center;
-    align-items: flex-start;
+    @include flex(column, null flex-start);
     margin-bottom: 150px;
 
     .cart-summary__delivery-checkbox{
         margin: 10px 0;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex(row, null, center);
+
+
     }
 }
+@media screen and (max-width: 950px){
+    .cart-summary__form--second{
+        height: 370px;
+    }
+        .order-summary__button{
+            margin: 0 !important;
+        }
+}
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 950px){
     .order{
         padding: 0 100px;
         align-items: flex-start;
@@ -131,9 +136,8 @@
                 padding: 45px;
 
                 .cart-summary__product-list-item{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+                    @include flex(row, space-between);
+
                     height: 88px;
                     margin-bottom: 45px;
 
@@ -147,8 +151,8 @@
                     }
 
                     .product-list-item__details{
-                        flex-direction: row;
-                        align-items: center;
+                        @include flex(row, null center);
+
                         font-size: 24px;
                         width: 100%;
 
@@ -166,7 +170,7 @@
         }
     }
     .cart-summary__total-cost{
-        @include poppins-36($black);
+        @include poppins(36px, $black);
     }
     .form-title{
         text-align: center;
@@ -190,11 +194,11 @@
         align-items: center;
 
         .input-short{
-            @include flex-col-center;
+            @include flex(column, null, center);
             grid-area: inputShort
         }
         .input-long{
-            @include flex-col-center;
+            @include flex(column, null, center);
             grid-area: inputLong
         }
     }

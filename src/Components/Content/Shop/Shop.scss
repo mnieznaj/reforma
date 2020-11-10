@@ -4,8 +4,7 @@
 .shop{
     width: 100vw;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, null, null);
 
     .product-section{
         width: 100%;
@@ -33,24 +32,21 @@
 
         .product-presentation{
             grid-area: presentation;
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
+            @include img-props(cover, 100%, 100%);
         }
         
         .product-img{
             grid-area: img;
             display: block;
+            object-fit: cover;
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
         .product{
             grid-area: product;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+
+            @include flex(column, center, center);
+
             height: auto;
             
             * {
@@ -78,9 +74,9 @@
                 height: 63px;
                 margin-bottom: 80px;
                 background-color: $black;
-                color: $white;
-                font-family: 'Poppins', sans-serif;
-                font-size: 16px;
+
+                @include poppins(16px, $white, null, null);
+
                 cursor: pointer;
             }   
         }   
@@ -119,11 +115,9 @@
         margin-top: 0;
     }
     .product{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, center, center);
+
         height: 100%;
-        justify-content: center;
         
         * {
             margin: 1rem auto
@@ -148,9 +142,9 @@
             width: 220px;
             height: 80px;
             background-color: $black;
-            color: $white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
+
+            @include poppins(26px, $white, null, null);
+
             cursor: pointer;
         }
     }

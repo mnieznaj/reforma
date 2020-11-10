@@ -1,19 +1,17 @@
 // FOOTER
 @import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 .footer{
     width: 100%;
     height: 366px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
+
     background-color: $black;
 
     .footer-link-list{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex(row, null, center);
+
         list-style: none;
         margin-bottom: 2rem;
 
@@ -23,16 +21,12 @@
         }
 
         .footer-link-item > a{
-            color: $white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            line-height: 36px;
+            @include poppins(24px, $white, 36px, null);
+
             letter-spacing: 0.15em;
 
             &:first-child{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                @include flex(row, null, center);
             }
             img{
                 margin-right: 1rem;

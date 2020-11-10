@@ -1,4 +1,5 @@
 @import '../../../scss/helpers/variables';
+@import '../../../scss//helpers/mixins';
 // ABOUT US
 
 .about-us__panel{
@@ -6,22 +7,17 @@
     width: 100%;
     z-index: 0;
 
-    display: flex;
-    flex-direction: column;
+    @include flex(column, null, null)
 }
 
 .about-us__img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    @include img-props(contain, 100%, auto);
     display: none;
 }
 
 .about-us-panel__story{
-    display: flex;
-    flex-direction: column;
-    padding: 45px;
-    margin-left: 40px;
+    @include flex(column, null, null);
+    @include separation(0 0 0 40px, 45px);
 }
 .about-us-panel__title{
     max-width: 500px;
@@ -37,8 +33,7 @@
     
 .about-us-panel__description{
     display: block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    @include poppins(18px, null, null, null);
 }
 
 @media screen and (max-width: 800px){
@@ -102,8 +97,6 @@
     }
 
     .about-us__img{
-        width: 100vw;
-        height: auto;
-        object-fit: cover;
+        @include img-props(cover, 100vw, auto);
     }
 }

@@ -1,28 +1,34 @@
 @import './variables';
 
-@mixin flex-col-center {
+@mixin flex($dir, $justify:0, $align:0) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-@mixin flex-row-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
 }
 
-@mixin poppins-36($color){
-    font-family: "Poppins";
-    font-size: 36px;
+@mixin poppins($size, $color: 0, $line: 0, $align: 0){
+    font-family: "Poppins", sans-serif;
+    font-size: $size;
     color: $color;
+    line-height: $line;
+    text-align: $align;
 }
-@mixin poppins-24($color){
-    font-family: "Poppins";
-    font-size: 24px;
-    color: $color;
+
+@mixin img-props($fit, $width, $height){
+    object-fit: $fit;
+    width: $width;
+    height: $height;
 }
-@mixin poppins-18($color){
-    font-family: "Poppins";
-    font-size: 18px;
-    color: $color;
+
+@mixin separation($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin blend-stroke{
+    color: $white;
+    -webkit-text-fill-color: $black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:$white;
 }

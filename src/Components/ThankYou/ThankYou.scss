@@ -8,16 +8,12 @@
     height: 100vh;
     background-color: $white;
 
-    @include flex-col-center;
-    justify-content: center;
-
+    @include flex(column, center, center);
     p{
-        font-family: 'Poppins';
+        @include poppins(36px, $black, null, center);
+
         font-style: normal;
         font-weight: 500;
-        font-size: 36px;
-        color: $black;
-        text-align: center;
         width: 400px;
         height: auto;
     }

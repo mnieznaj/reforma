@@ -15,10 +15,8 @@
 }
 
 .nav-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex(row, flex-end, center);
+
     width: 100%;
     height: 40px;
     margin: 40px 0 0;
@@ -36,7 +34,6 @@
         line-height: 40px;
         text-align: center;
         margin: 0 2.5rem;
-        display: inline-block;
         mix-blend-mode: difference;
         font-size: 1.2rem;
         cursor: pointer;
@@ -92,11 +89,12 @@ rect{
         margin: 15px;
     }
     .nav-list{
+        @include flex(column, flex-start, null);
+
         display: none;
-        flex-direction: column;
+
         height: 367px;
         background-color: $white;
-        justify-content: flex-start;
         mix-blend-mode: normal;
         padding: 0px;
         margin-top: 0;
